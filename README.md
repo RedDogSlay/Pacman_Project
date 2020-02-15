@@ -4,13 +4,13 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
 # User document
 Authors: Peter Adamopoulos, Jiayu Yan, Zanxiang Wang
 
-##Goal:
+## Goal:
 The goal of this project is to try and recreate a Pac-Man game for entertainment purposes. The end goal of this project is to create an avatar with which the player can control and can move around and collect points inside a maze while avoiding enemies from catching it much like the original game. The purpose of the game is to have players compete with one another to see who can get the highest score.
 
-##Potential Users:
+## Potential Users:
 The potential users of this project are children and adults or whoever would be interested in playing the original game. Since the main purpose of this project is for pastime entertainment, anyone who may be interested in video games are potential users of the project. There is currently no fixed type of user.
 
-##Functions:
+## Functions:
 
 The first function of the use case is to start the game. This action is controlled by the players. Players can start the game by clicking “S” to initialize the game when given the on-screen prompt. After user type “S”, the game will initialize the map and the Pac-Man character.
 
@@ -20,11 +20,11 @@ The third function is to end the game. The purpose of this game is for player to
 
 The next functions are the movement controls for the players to control the character. Currently the movements are controlled by the arrow keys on the keyboard.
 
-        The first function is to go up which allows the player to move the in-game character upwards.
-	The second function is to go down. This function allows the player to move the in-game character downwards.
-	The third function is to move left. This function allows the player to move the in-game character to move leftwards.
-	The fourth function is to move right. This function allows the player to move the in-game character rightwards.
-	The next function is for the program to initialize the map. This function will initialize the map or maze for the player to move the in-game character in. This function is started as soon as the program runs.
+1)The first function is to go up which allows the player to move the in-game character upwards.
+2)The second function is to go down. This function allows the player to move the in-game character downwards.
+3)The third function is to move left. This function allows the player to move the in-game character to move leftwards.
+4)The fourth function is to move right. This function allows the player to move the in-game character rightwards.
+5)The next function is for the program to initialize the map. This function will initialize the map or maze for the player to move the in-game character in. This function is started as soon as the program runs.
 
 Another function with the program that is included when initializing the map, is initializing the dots that Pac-Man eats within the game. Currently there is a function to create the dots and when creating the map the dot locations are implemented into specific locations.
 
