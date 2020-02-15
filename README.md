@@ -20,15 +20,11 @@ The third function is to end the game. The purpose of this game is for player to
 
 The next functions are the movement controls for the players to control the character. Currently the movements are controlled by the arrow keys on the keyboard.
 
-1)The first function is to go up which allows the player to move the in-game character upwards.
-
-2)The second function is to go down. This function allows the player to move the in-game character downwards.
-
-3)The third function is to move left. This function allows the player to move the in-game character to move leftwards.
-
-4)The fourth function is to move right. This function allows the player to move the in-game character rightwards.
-
-5)The next function is for the program to initialize the map. This function will initialize the map or maze for the player to move the in-game character in. This function is started as soon as the program runs.
+- The first function is to go up which allows the player to move the in-game character upwards.
+- The second function is to go down. This function allows the player to move the in-game character downwards.
+- The third function is to move left. This function allows the player to move the in-game character to move leftwards.
+- The fourth function is to move right. This function allows the player to move the in-game character rightwards.
+- The next function is for the program to initialize the map. This function will initialize the map or maze for the player to move the in-game character in. This function is started as soon as the program runs.
 
 Another function with the program that is included when initializing the map, is initializing the dots that Pac-Man eats within the game. Currently there is a function to create the dots and when creating the map the dot locations are implemented into specific locations.
 
