@@ -288,8 +288,8 @@ public class Pacman_Game extends JPanel implements ActionListener {
             int key = e.getKeyCode();
             if (key == Event.LEFT || key == Event.RIGHT
                     || key == Event.UP || key == Event.DOWN) {
-                req_dx = 0;
-                req_dy = 0;
+                //req_dx = 0;
+                //req_dy = 0;
             }
         }
     }
