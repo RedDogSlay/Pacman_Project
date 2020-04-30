@@ -48,7 +48,7 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
  
  
  
- If player run into an enemmy, game over.
+ If player run into an enemy, game over.
 
     if (pacman_x > (ghost_x[i] - 12) && pacman_x < (ghost_x[i] + 12)
           && pacman_y > (ghost_y[i] - 12) && pacman_y < (ghost_y[i] + 12)
