@@ -113,12 +113,19 @@ Actual Map in game:
 ![Map](https://github.com/RedDogSlay/Pacman_Project/blob/3rdRelease/images/Map.png?raw=true)
 
 # Key Control
+
 move up - arrow key up
+
 move down - arrow key down
+
 move left - arrow key left
+
 move right - arrow key right
+
 Restart - ESC
+
 Pause - space bar
+
 
 
 
