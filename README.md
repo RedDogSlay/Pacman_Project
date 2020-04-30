@@ -13,8 +13,8 @@ The potential users of this project are children and adults or whoever would be 
 ## Functions:
 
 The first function of the use case is to start the game. This action is controlled by the players. Players can start the game by clicking “S” to initialize the game when given the on-screen prompt. After user type “S”, the game will initialize the map and the Pac-Man character.
-  
-Another function is to pause the game. This function’s main purpose is to pause the game when the user chooses to during the game. This function is activated by pressing “Enter” on the keyboard, and as the name implies will temporarily pause the game and the player may choose to resume the game whenever they want.
+
+Another function is to pause the game. This function’s main purpose is to pause the game when the user chooses to during the game. This function is activated by pressing “Enter” on the keyboard, and as the name implies will temporarily pause the game and the player may choose to resume the game whenever they desire.
 
 The third function is to end the game. The purpose of this game is for player to shut down the program after finishing the game. After player's character have died from the game, the player will have the choice to start a new game or end the game and quit the program. Currently this function is not yet fully implemented as there are no enemies or way to die within the game, but the game can be quit from by pressing the close button on the interface. This function currently allows the player to shut down the program whenever they choose to.
 
