@@ -146,4 +146,4 @@ Another function with the program that is included when initializing the map, is
 
 Another function is to initialize the character/s. This function will initialize a character for the player to control inside the initialized map by loading an image to use as a sprite.
 
-This function will also initialize enemies, but in the current version of the game there are no enemies but will be implemented in a future release. In the original game of Pac-Man, players are chased around by several enemies and this function initializes and loads the sprites in game for the NPCs to chase around the player as well as loads the playable sprite within the map.
+This function will also initialize enemies, but in the current version of the game there are no enemies but will be implemented in a future release. In the original game of Pac-Man, players are chased around by several enemies and this function initializes and loads the sprites in game for the None Player Character to chase around the player as well as loads the playable sprite within the map.
