@@ -111,6 +111,10 @@ Actual Map in game:
 ![Map](https://github.com/RedDogSlay/Pacman_Project/blob/3rdRelease/images/Map.png?raw=true)
 
 
+
+
+
+# -------------------------2nd Release-------------------------
 # User document
 Authors: Peter Adamopoulos, Jiayu Yan, Zanxiang Wang
 
