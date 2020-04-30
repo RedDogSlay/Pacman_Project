@@ -56,7 +56,7 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
 
 
  ## Map Drawing
- We have implemented a map drawing algorithm that will takes number to dertimine the maze.
+We have implemented a map drawing algorithm that will take the number to determine the maze.
  
          for (y = 0; y < SCREEN_SIZE; y += BLOCK_SIZE) {
             for (x = 0; x < SCREEN_SIZE; x += BLOCK_SIZE) {
