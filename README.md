@@ -1,6 +1,136 @@
 # Pacman_Project
 To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" into the main directory. For the sprites to appear in the game, place the "images" folder within the main directory as well.
 
+# 3rd Release Changes
+## Goal: Service-oriented programming 
+- Add enemy AI algorithm(service)
+- Add scores for gameplay
+- Pacman has 3 lifes per game.
+- Optimize gameplay pace
+
+  - minor changes like player speed, enemy speed
+ 
+ - Optimize map drawing algorithm(service)
+ 
+ # Service/Functionality 
+ ## Enemy AI algorithm
+ We have implemented an algorithm for Pacman ghost that wanders around the map. 
+             
+           for (i = 0; i < N_GHOSTS; i++) {
+                if (ghost_x[i] % BLOCK_SIZE == 0 && ghost_y[i] % BLOCK_SIZE == 0) {
+                        pos = ghost_x[i] / BLOCK_SIZE + N_BLOCKS * (int) (ghost_y[i] / BLOCK_SIZE);
+                        count = 0;
+
+                if ((screenData[pos] & 1) == 0 && ghost_dx[i] != 1) {
+                       dx[count] = -1;
+                       dy[count] = 0;
+                       count++;
+                }
+
+                if ((screenData[pos] & 2) == 0 && ghost_dy[i] != 1) {
+                       dx[count] = 0;
+                       dy[count] = -1;
+                       count++;
+                }
+
+                if ((screenData[pos] & 4) == 0 && ghost_dx[i] != -1) {
+                       dx[count] = 1;
+                       dy[count] = 0;
+                       count++;
+                }
+
+                if ((screenData[pos] & 8) == 0 && ghost_dy[i] != -1) {
+                       dx[count] = 0;
+                       dy[count] = 1;
+                       count++;
+                }
+ 
+ 
+ 
+ 
+ If player run into an enemy, game over.
+
+    if (pacman_x > (ghost_x[i] - 12) && pacman_x < (ghost_x[i] + 12)
+          && pacman_y > (ghost_y[i] - 12) && pacman_y < (ghost_y[i] + 12)
+          && inGame) {
+            dying = true;
+           }
+
+
+ ## Map Drawing
+We have implemented a map drawing algorithm that will take the number to determine the maze.
+ 
+         for (y = 0; y < SCREEN_SIZE; y += BLOCK_SIZE) {
+            for (x = 0; x < SCREEN_SIZE; x += BLOCK_SIZE) {
+
+                g2d.setColor(mazeColor);
+                g2d.setStroke(new BasicStroke(2));
+
+                if ((screenData[i] & 1) != 0) { 
+                    g2d.drawLine(x, y, x, y + BLOCK_SIZE - 1);
+                }
+
+                if ((screenData[i] & 2) != 0) { 
+                    g2d.drawLine(x, y, x + BLOCK_SIZE - 1, y);
+                }
+
+                if ((screenData[i] & 4) != 0) { 
+                    g2d.drawLine(x + BLOCK_SIZE - 1, y, x + BLOCK_SIZE - 1,
+                            y + BLOCK_SIZE - 1);
+                }
+
+                if ((screenData[i] & 8) != 0) { 
+                    g2d.drawLine(x, y + BLOCK_SIZE - 1, x + BLOCK_SIZE - 1,
+                            y + BLOCK_SIZE - 1);
+                }
+
+                if ((screenData[i] & 16) != 0) { 
+                    g2d.setColor(dotColor);
+                    g2d.fillRect(x + 11, y + 11, 2, 2);
+                }
+ 
+Map variable 
+ 
+    private final short map[] = {19, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 22,
+        17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 16, 24, 16, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 24, 24, 28, 0, 25, 24, 24, 16, 16, 16, 20,
+        17, 16, 16, 20,  0,  0,  0, 0,  0,  0,  0, 17, 16, 16, 20,
+        17, 16, 16, 16, 18, 18, 22, 0, 19, 18, 18, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 20, 0, 17, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 16, 18, 16, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
+        17, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 20,
+        25, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,24, 24, 28
+    };
+
+Actual Map in game:
+
+![Map](https://github.com/RedDogSlay/Pacman_Project/blob/3rdRelease/images/Map.png?raw=true)
+
+# Key Control
+
+move up - arrow key up
+
+move down - arrow key down
+
+move left - arrow key left
+
+move right - arrow key right
+
+Restart - ESC
+
+Pause - space bar
+
+
+
+
+
+# -------------------------2nd Release-------------------------
 # User document
 Authors: Peter Adamopoulos, Jiayu Yan, Zanxiang Wang
 
@@ -30,4 +160,4 @@ Another function with the program that is included when initializing the map, is
 
 Another function is to initialize the character/s. This function will initialize a character for the player to control inside the initialized map by loading an image to use as a sprite.
 
-This function will also initialize enemies, but in the current version of the game there are no enemies but will be implemented in a future release. In the original game of Pac-Man, players are chased around by several enemies and this function initializes and loads the sprites in game for the NPCs to chase around the player as well as loads the playable sprite within the map.
+This function will also initialize enemies, but in the current version of the game there are no enemies but will be implemented in a future release. In the original game of Pac-Man, players are chased around by several enemies and this function initializes and loads the sprites in game for the None Player Character to chase around the player as well as loads the playable sprite within the map.
