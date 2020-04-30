@@ -4,7 +4,6 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
 # 3rd Release Changes
 ## Goal: Service-oriented programming 
 - Add enemy AI algorithm(service)
-- Add scores for gameplay
 - Optimize gameplay pace
 
   - minor changes like player speed, enemy speed
@@ -13,7 +12,7 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
  
  # Service/Functionality 
  ## Enemy AI algorithm
- We have implemented an algorithm for Pacman ghost that wonders around the map. 
+ We have implemented an algorithm for Pacman ghost that wanders around the map. 
              
            for (i = 0; i < N_GHOSTS; i++) {
                 if (ghost_x[i] % BLOCK_SIZE == 0 && ghost_y[i] % BLOCK_SIZE == 0) {
