@@ -60,28 +60,28 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
  ## Map Drawing
 We have implemented a map drawing algorithm that will take the number to determine the maze.
  
-         for (y = 0; y < SCREEN_SIZE; y += BLOCK_SIZE) {
-            for (x = 0; x < SCREEN_SIZE; x += BLOCK_SIZE) {
+         for (y = 0; y < SCREEN_SIZE; y += CELL_SIZE) {
+            for (x = 0; x < SCREEN_SIZE; x += CELL_SIZE) {
 
                 g2d.setColor(mazeColor);
                 g2d.setStroke(new BasicStroke(2));
 
                 if ((screenData[i] & 1) != 0) { 
-                    g2d.drawLine(x, y, x, y + BLOCK_SIZE - 1);
+                    g2d.drawLine(x, y, x, y + CELL_SIZE - 1);
                 }
 
                 if ((screenData[i] & 2) != 0) { 
-                    g2d.drawLine(x, y, x + BLOCK_SIZE - 1, y);
+                    g2d.drawLine(x, y, x + CELL_SIZE - 1, y);
                 }
 
                 if ((screenData[i] & 4) != 0) { 
-                    g2d.drawLine(x + BLOCK_SIZE - 1, y, x + BLOCK_SIZE - 1,
-                            y + BLOCK_SIZE - 1);
+                    g2d.drawLine(x + CELL_SIZE - 1, y, x + CELL_SIZE - 1,
+                            y + CELL_SIZE - 1);
                 }
 
                 if ((screenData[i] & 8) != 0) { 
-                    g2d.drawLine(x, y + BLOCK_SIZE - 1, x + BLOCK_SIZE - 1,
-                            y + BLOCK_SIZE - 1);
+                    g2d.drawLine(x, y + CELL_SIZE - 1, x + CELL_SIZE - 1,
+                            y + CELL_SIZE - 1);
                 }
 
                 if ((screenData[i] & 16) != 0) { 
