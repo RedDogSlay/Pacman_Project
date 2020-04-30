@@ -4,6 +4,8 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
 # 3rd Release Changes
 ## Goal: Service-oriented programming 
 - Add enemy AI algorithm(service)
+- Add scores for gameplay
+- Pacman has 3 lifes per game.
 - Optimize gameplay pace
 
   - minor changes like player speed, enemy speed
