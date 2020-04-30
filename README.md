@@ -17,8 +17,8 @@ To run this, place the "src" folder with "Pacman_Game.java" and "Start.java" int
  We have implemented an algorithm for Pacman ghost that wanders around the map. 
              
            for (i = 0; i < N_GHOSTS; i++) {
-                if (ghost_x[i] % BLOCK_SIZE == 0 && ghost_y[i] % BLOCK_SIZE == 0) {
-                        pos = ghost_x[i] / BLOCK_SIZE + N_BLOCKS * (int) (ghost_y[i] / BLOCK_SIZE);
+                if (ghost_x[i] % CELL_SIZE == 0 && ghost_y[i] % CELL == 0) {
+                        pos = ghost_x[i] / CELL_SIZE + N_CELL * (int) (ghost_y[i] / CELL_SIZE);
                         count = 0;
 
                 if ((screenData[pos] & 1) == 0 && ghost_dx[i] != 1) {
